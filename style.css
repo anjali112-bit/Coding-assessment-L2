@@ -1,0 +1,168 @@
+/* Import Inter font */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the heading */
+h1 {
+  text-align: center;
+  color: black;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+/* Hover effect */
+h1:hover {
+  color: darkgray;
+}
+
+/* Style the category list */
+.category-list {
+  display: flex;
+  justify-content: center; /* Align center horizontally */
+  margin-top: 20px;
+  flex-wrap: nowrap; /* Ensure categories stay in the same line */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding-bottom: 10px; /* Add bottom padding to accommodate scrollbar */
+}
+
+/* Style each category container */
+.category-container {
+  flex-grow: 1;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  width: 150px; /* Set a fixed width for categories */
+  margin: 5px; /* Add margin between categories */
+}
+
+/* Style selected category */
+.selected {
+  background-color: black;
+  color: white;
+}
+
+/* Container for product cards */
+#productCardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px; /* Add margin to separate from category list */
+  padding: 0 15px; /* Add padding to match category list margin */
+}
+
+/* Main card style */
+.maincard {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px; /* Adjusted margin for closer spacing */
+  width: calc(50% - 20px); /* Half width with margins accounted for */
+  max-width: 200px; /* Limit width for consistency */
+  height: 350px; /* Reduced height */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  position: relative; /* Needed for badge positioning */
+}
+
+/* Product card styles */
+.card {
+  height: 100%; /* Fill the parent container */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 100%;
+  height: 150px; /* Reduced height for image */
+  border-radius: 5px;
+  object-fit: contain; /* Display full image without cutting */
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.special-badge {
+  background-color: #ff6f61;
+  color: white;
+}
+
+.on-offer-badge {
+  background-color: #ffba08;
+  color: black;
+}
+
+.new-badge {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.card-content {
+  padding-bottom: 10px; /* Adjusted padding for better spacing */
+}
+
+.card span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.card p {
+  margin-top: 5px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.discounted-price {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+/* Button style */
+.add-to-cart-button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.add-to-cart-button:hover {
+  background-color: #333;
+}
+
+/* Responsive styles */
+@media screen and (min-width: 768px) {
+  .category-container {
+      width: calc(33.333% - 10px); /* One-third width with margins accounted for */
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .maincard {
+      width: calc(25% - 20px); /* Quarter width with margins accounted for */
+  }
+}
